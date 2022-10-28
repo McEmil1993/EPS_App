@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pr"
+    tools:context=".ListTask">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="name"
+                android:textColor="#474646"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/searh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:textColor="#474646"
+                android:textSize="12sp"/>
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+<!--            <EditText-->
+<!--                android:id="@+id/txtsearch"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="38dp"-->
+<!--                android:paddingLeft="10dp"-->
+<!--                android:hint="Search name.."-->
+<!--                android:textColor="#0B0B0B"-->
+<!--                android:textSize="12sp"/>-->
+            <SearchView
+                android:id="@+id/txtsearch"
+                android:theme="@style/AppSearchView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:queryHint="Search Here"
+                android:iconifiedByDefault="false"
+                android:layout_alignParentTop="true"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+        <TableLayout
+            android:id="@+id/simpleTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2,3"> <!-- stretch the second column of the layout-->
+            <!-- first row of the table layout-->
+            <TableRow
+                android:id="@+id/firstRow"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+                <!-- first element of the row-->
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:background="#CDC6C6"
+                    android:padding="5dp"
+                    android:gravity="left"
+                    android:text="Category"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:background="#CDC6C6"
+                    android:padding="5dp"
+                    android:text="Name"
+                    android:gravity="left"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:background="#CDC6C6"
+                    android:padding="5dp"
+                    android:gravity="left"
+                    android:text="Description"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:background="#CDC6C6"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="Action"
+                    android:textColor="#000"
+                    android:textSize="12dp" />
+
+            </TableRow>
+        </TableLayout>
+        <ScrollView
+            android:id="@+id/scrollViewDisplay"
+            android:layout_marginTop="26dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/layoutDisplayPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tvNoRecordsFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="No Records Found"
+                        android:textColor="#040404"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/parentLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"></LinearLayout>
+
+                </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/btnAddNewRecord"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        android:text="ADD"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textStyle="bold" />-->
+
+</LinearLayout>

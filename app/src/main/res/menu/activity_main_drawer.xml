@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_male"
+            android:title="My Profile" />
+    </group>
+
+
+    <group
+        android:id="@+id/nav_communication_group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_sched"
+            android:icon="@drawable/ic_baseline_schedule_24"
+            android:title="Schedule" />
+        <item
+            android:id="@+id/nav_buiding"
+            android:icon="@drawable/ic_baseline_table_chart_24"
+            android:title="Building" />
+
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_baseline_view_list_24"
+            android:title="Category" />
+        <item
+            android:id="@+id/nav_equipment"
+            android:icon="@drawable/ic_baseline_ballot_24"
+            android:title="Equipment" />
+
+    </group>
+</menu>

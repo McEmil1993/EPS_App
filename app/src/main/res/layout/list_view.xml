@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/inflateParentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+    <TableLayout
+        android:id="@+id/simpleTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="0,1,2,3"> <!-- stretch the second column of the layout-->
+        <!-- first row of the table layout-->
+        <TableRow
+            android:id="@+id/firstRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- first element of the row-->
+            <TextView
+                android:id="@+id/simpleTextView1"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:padding="5dp"
+                android:inputType="textMultiLine"
+                android:gravity="left"
+                android:text="Category"
+                android:textColor="#000"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/simpleTextView2"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:padding="5dp"
+                android:text="Name"
+                android:inputType="textMultiLine"
+                android:gravity="left"
+                android:textColor="#000"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/simpleTextView3"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:padding="5dp"
+                android:inputType="textMultiLine"
+                android:gravity="left"
+                android:text="Description"
+                android:textColor="#000"
+                android:textSize="12dp" />
+            <TextView
+                android:id="@+id/simpleTextView4"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:background="#F8F8F8"
+                android:padding="5dp"
+                android:inputType="textMultiLine"
+                android:gravity="center"
+                android:text="Action"
+                android:textColor="#000"
+                android:textSize="12dp" />
+
+        </TableRow>
+    </TableLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>-->
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/li"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/eqpt_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center"
+                    android:contentDescription="Image"
+                    android:background="@drawable/image_round"/>
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="35dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/eqpt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:text="Name"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/eqt_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="Description"
+                    android:textSize="10dp"/>
+                <TextView
+                    android:id="@+id/eqt_cate_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="Category"
+                    android:textSize="10dp" />
+                <TextView
+                    android:id="@+id/eqt_quan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="Quantity"
+                    android:textSize="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20sp"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnUpdate"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:textSize="15dp"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ic_baseline_edit_24"
+                android:drawablePadding="5dp"/>
+            <TextView
+                android:id="@+id/btndelete"
+                android:layout_marginTop="10dp"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Delete"
+                android:drawableLeft="@drawable/ic_baseline_delete_24"
+                android:drawablePadding="5dp"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
